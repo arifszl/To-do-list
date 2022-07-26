@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do list</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="box" id="heading">
+            <!-- taking kindofday from server -->
+    <h1> <%= kindofday %>  To-Do list!  </h1> 
+    </div>
+    
+    <div class="box">
+       
+        
+            <!-- adding dynamic items using scriptlet tag  -->
+          <%  for(var i=0;i<newListItems.length ;i++){ %>
+            <div class="item">
+                <input type="checkbox" name="" id="">
+                
+                <h3> <%= newListItems[i] %> </h3>
+                          </div>
+           
+           <% } %>
+           <form class="item" action="/" method="post">
+            <input type="text" name="newItem" placeholder="add-Items">
+            <button type="submit" name="button">+</button>
+        </form>
+         
+    </div>
+   
+   
+</body>
+</html>
